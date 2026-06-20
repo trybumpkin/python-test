@@ -2,4 +2,5 @@ DEFAULT_FAREWELL = "Goodbye"
 
 
 def farewell(name: str) -> str:
-    return f"{DEFAULT_FAREWELL}, {name}!"
+    cleaned_name = name.strip()
+    return f"{DEFAULT_FAREWELL}, {cleaned_name or 'friend'}!"

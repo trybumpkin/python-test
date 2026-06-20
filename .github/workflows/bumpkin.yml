@@ -70,7 +70,7 @@ jobs:
 
       - id: bumpkin
         name: Run Bumpkin release workflow
-        uses: trybumpkin/bumpkin@v1
+        uses: trybumpkin/bumpkin@codex/fix-preview-rationale
         with:
           operation: ${{ env.BUMPKIN_OPERATION }}
           base_tag: ${{ env.BUMPKIN_BASE_TAG }}

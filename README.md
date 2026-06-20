@@ -26,6 +26,9 @@ This repo includes the standard Bumpkin preview/publish workflow at:
 
 - `.github/workflows/bumpkin.yml`
 
+Preview runs create a maintainer-facing briefing artifact.
+Publish runs reuse that saved candidate and ship the public release notes body.
+
 Required secrets:
 
 - `BUMPKIN_MODEL`

@@ -2,7 +2,7 @@ DEFAULT_GREETING = "Hello"
 
 
 def _normalize_name(name: str) -> str:
-    normalized = name.strip()
+    normalized = " ".join(name.split())
     return normalized or "friend"
 
 

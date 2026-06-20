@@ -10,7 +10,6 @@ Current behavior:
 
 - `greet(" Alice ")` returns `Hello, Alice!`
 - empty or whitespace-only names fall back to `Hello, friend!`
-- `farewell(" Bob ")` returns `Goodbye, Bob!`
 
 Public exports include:
 
@@ -19,7 +18,6 @@ Public exports include:
 - `greet_pair`
 - `available_greetings`
 - `greet_formally`
-- `farewell`
 
 ## Release workflow
 

@@ -1,3 +1,3 @@
-from .api import greet, greet_many
+from .api import DEFAULT_GREETING, greet, greet_many
 
-__all__ = ["greet", "greet_many"]
+__all__ = ["DEFAULT_GREETING", "greet", "greet_many"]

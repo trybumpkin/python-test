@@ -6,6 +6,12 @@ Small smoke repo for testing Bumpkin on Python package changes.
 
 The package lives under `src/python_test`.
 
+Public exports include:
+
+- `greet`
+- `greet_many`
+- `farewell`
+
 ## Release workflow
 
 This repo includes the standard Bumpkin preview/publish workflow at:

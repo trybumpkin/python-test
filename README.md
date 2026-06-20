@@ -6,6 +6,11 @@ Small smoke repo for testing Bumpkin on Python package changes.
 
 The package lives under `src/python_test`.
 
+Current behavior:
+
+- `greet(" Alice ")` returns `Hello, Alice!`
+- empty or whitespace-only names fall back to `Hello, friend!`
+
 ## Release workflow
 
 This repo includes the standard Bumpkin preview/publish workflow at:

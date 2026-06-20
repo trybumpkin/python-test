@@ -1,12 +1,16 @@
 name: Bumpkin Release
 run-name: >-
   ${{
+    github.event_name == 'workflow_dispatch' &&
     inputs.operation == 'release_publish' &&
     'Bumpkin Publish' ||
     'Bumpkin Preview'
   }}
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
     inputs:
       operation:
@@ -35,6 +39,26 @@ permissions:
   contents: write
   pull-requests: read
 
+env:
+  BUMPKIN_OPERATION: >-
+    ${{
+      github.event_name == 'workflow_dispatch' &&
+      inputs.operation ||
+      'release_preview'
+    }}
+  BUMPKIN_BASE_TAG: >-
+    ${{
+      github.event_name == 'workflow_dispatch' &&
+      inputs.base_tag ||
+      ''
+    }}
+  BUMPKIN_PREVIEW_RUN_ID: >-
+    ${{
+      github.event_name == 'workflow_dispatch' &&
+      inputs.preview_run_id ||
+      ''
+    }}
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -48,9 +72,9 @@ jobs:
         name: Run Bumpkin release workflow
         uses: trybumpkin/bumpkin@v1
         with:
-          operation: ${{ inputs.operation }}
-          base_tag: ${{ inputs.base_tag }}
-          preview_run_id: ${{ inputs.preview_run_id }}
+          operation: ${{ env.BUMPKIN_OPERATION }}
+          base_tag: ${{ env.BUMPKIN_BASE_TAG }}
+          preview_run_id: ${{ env.BUMPKIN_PREVIEW_RUN_ID }}
           model: ${{ secrets.BUMPKIN_MODEL }}
           fallback_model: ${{ secrets.BUMPKIN_FALLBACK_MODEL || '' }}
           models_endpoint: ${{ secrets.BUMPKIN_MODELS_ENDPOINT }}

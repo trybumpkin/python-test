@@ -11,6 +11,13 @@ Current behavior:
 - `greet(" Alice ")` returns `Hello, Alice!`
 - empty or whitespace-only names fall back to `Hello, friend!`
 
+Public exports include:
+
+- `greet`
+- `greet_many`
+- `greet_formally`
+- `farewell`
+
 ## Release workflow
 
 This repo includes the standard Bumpkin preview/publish workflow at:

@@ -17,6 +17,7 @@ Public exports include:
 - `greet`
 - `greet_many`
 - `greet_pair`
+- `available_greetings`
 - `greet_formally`
 - `farewell`
 

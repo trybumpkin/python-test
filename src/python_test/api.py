@@ -12,3 +12,7 @@ def greet(name: str) -> str:
 
 def greet_many(names: list[str]) -> list[str]:
     return [greet(name) for name in names]
+
+
+def greet_pair(first_name: str, second_name: str) -> tuple[str, str]:
+    return (greet(first_name), greet(second_name))

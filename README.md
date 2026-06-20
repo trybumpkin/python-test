@@ -2,6 +2,8 @@
 
 Small smoke repo for testing Bumpkin on Python package changes.
 
+Current support floor: Python 3.11+
+
 ## Package
 
 The package lives under `src/python_test`.

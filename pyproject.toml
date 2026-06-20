@@ -7,7 +7,7 @@ name = "python-test"
 version = "0.1.0"
 description = "Smoke repo for testing Bumpkin Python release planning"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 authors = [
   { name = "Bumpkin" }
 ]

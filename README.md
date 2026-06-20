@@ -16,6 +16,7 @@ Public exports include:
 - `greet`
 - `greet_many`
 - `greet_pair`
+- `greet_with_prefix`
 - `available_greetings`
 - `greet_formally`
 
